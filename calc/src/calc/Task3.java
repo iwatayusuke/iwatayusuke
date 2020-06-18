@@ -12,9 +12,7 @@ public class Task3 {
         int e = 3;
         int f = d / e;
 
-        double g, h;
-		g = 3.0;
-		h = d / g;
+        double g = 3.0, h = d / g;
 
         System.out.println(a);
         System.out.println(b);
