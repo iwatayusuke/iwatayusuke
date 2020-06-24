@@ -10,10 +10,10 @@ public class Task3 {
         int a = sc.nextInt();
         int b = 0;
 
-            while(a != 0) {
-                a = a / 10;
-                b = b + 1;
-            }
+        while(a != 0) {
+            a = a / 10;
+            b++;
+        }
         System.out.println("桁数：" + b);
         sc.close();
 

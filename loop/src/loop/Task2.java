@@ -9,11 +9,11 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int sum = 0;
-        
-            for(int i = 1; i < a; i++) {
-                sum = sum + i;
-                System.out.print(i + " + ");
-            }
+
+        for(int i = 1; i < a; i++) {
+            sum = sum + i;
+            System.out.print(i + " + ");
+        }
         System.out.print(a + " ");
         System.out.println("= " + (sum + a));
         sc.close();

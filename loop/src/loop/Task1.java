@@ -9,10 +9,10 @@ public class Task1 {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int sum = 0;
-        
-            for(int i = 0; i <= a; i++) {
-                sum = sum + i;
-            }
+
+        for(int i = 0; i <= a; i++) {
+            sum = sum + i;
+        }
         System.out.println("1～" + a + "までの合計：" + sum);
         sc.close();
 
