@@ -10,11 +10,11 @@ public class Task2 {
         int a = sc.nextInt();
 
         System.out.println(a);
-            if(a < 10) {
-        System.out.println("値：0" + a);
-            }else {
-                System.out.println("値：" + a);
-            }
+        if(a < 10) {
+            System.out.println("値：0" + a);
+        }else {
+            System.out.println("値：" + a);
+        }
         sc.close();
     }
 
