@@ -6,18 +6,18 @@ public class Task3 {
 
     public static void main(String[] args) {
         int[] numbers = new int[6];
-        int max = 0, min = 0;
+        int max = 0, min = 9;
         Random r = new Random();
 
         for(int i = 0; i < numbers.length; i++) {
-            numbers[i] = r.nextInt(9);
-                if(i == 0) {
-                    System.out.print("［" + numbers[i] + ",");
-                }else if(i < numbers.length - 1) {
-                    System.out.print(numbers[i] + ",");
-                }else if(i == numbers.length - 1) {
-                    System.out.println(numbers[i] + "］");
-                }
+            numbers[i] = r.nextInt(10);
+            if(i == 0) {
+                System.out.print("［" + numbers[i] + ",");
+            }else if(i < numbers.length - 1) {
+                System.out.print(numbers[i] + ",");
+            }else if(i == numbers.length - 1) {
+                System.out.println(numbers[i] + "］");
+            }
         }
 
         for(int i = 0; i < numbers.length; i++) {
