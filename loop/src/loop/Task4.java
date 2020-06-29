@@ -14,7 +14,7 @@ public class Task4 {
             if(a % i == 0) {
                 System.out.print(i + ",");
             }
-            }
+        }
         System.out.print(a);
         sc.close();
 
