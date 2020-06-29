@@ -1,15 +1,15 @@
 package instance;
 
 class Task3 {
-    public void main(String args[]){
-    String name = "岩田祐介";
-    int age =29;
-    myProfile();
+    public static void main(String args[]){
+        //Personクラスのインスタンスを生成
+        Person iwata = new Person();
+
+        //生成したPersonインスタンスのフィールドに値を設定
+        iwata.name = "岩田祐介";
+        iwata.age = 29;
+
+        iwata.myProfile();
     }
 
-    public void myProfile() {
-        System.out.println("私の名前は" + this.name + "です。");
-        System.out.println("年齢は" + this.age + "です。");
-        System.out.println("よろしくおねがいします。");
-    }
 }
