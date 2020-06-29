@@ -14,11 +14,12 @@ public class Task4 {
 
     public static boolean nullCheck(String[] arrayOne) {
         boolean f = false;
-    for(int i = 0; i < arrayOne.length; i++) {
-        if(arrayOne[i] == null) {
-            f = true;
+        for(int i = 0; i < arrayOne.length; i++) {
+            if(arrayOne[i] == null) {
+                f = true;
+                break;
+            }
         }
-    }
-    return f;
+        return f;
     }
 }
