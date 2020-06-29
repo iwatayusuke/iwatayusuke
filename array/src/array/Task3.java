@@ -23,14 +23,10 @@ public class Task3 {
         for(int i = 0; i < numbers.length; i++) {
             if(max < numbers[i]) {
                 max = numbers[i];
-            }
-        }
-        for(int i = 0; i < numbers.length; i++) {
-            if(min > numbers[i]) {
+            }else if(min > numbers[i]) {
                 min = numbers[i];
             }
         }
-
         System.out.println("最大値：" + max);
         System.out.println("最小値：" + min);
     }
