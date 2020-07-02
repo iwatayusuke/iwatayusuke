@@ -23,7 +23,7 @@ public class Task3 {
         for(int i = 0; i < numbers.length; i++) {
             if(max < numbers[i]) {
                 max = numbers[i];
-            }else if(min > numbers[i]) {
+            }if(min > numbers[i]) {
                 min = numbers[i];
             }
         }
