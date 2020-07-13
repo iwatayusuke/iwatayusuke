@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%! int count = 0; %>
+<%! int count = 1; %>
 <meta charset="UTF-8">
 <title>task3</title>
 </head>
