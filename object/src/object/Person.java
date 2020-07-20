@@ -9,17 +9,17 @@ public class Person {
     static int wallet = 0;
 
     //コンストラクタ　引数なし
-    Person(){}
+    public Person(){}
 
     //コンストラクタ　引数あり
-    Person(String name, int age){
+    public Person(String name, int age){
         this.name = name;
         this.age = age;
     }
 
     //財布の中身
-    Person(int wallet){
-        this.wallet = this.wallet + wallet;
+    public Person(int wallet){
+        this.wallet +=  wallet;
     }
 
     //getter
