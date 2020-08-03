@@ -1,0 +1,4 @@
+1. doGET
+2. doPOST
+3. doGET
+4. doPOST
