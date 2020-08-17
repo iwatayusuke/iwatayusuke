@@ -17,25 +17,25 @@ public class Result extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        String Name = request.getParameter("name");
+        String name = request.getParameter("name");
         String gen = request.getParameter("gender");
-        String Gender = "";
+        String gender = "";
         String sel = request.getParameter("select");
-        String Select = "";
-        String Textbox = request.getParameter("textbox");
+        String select = "";
+        String textBox = request.getParameter("textbox");
 
         if(gen.equals("0")){
-            Gender = "男";
+            gender = "男";
         }else if(gen.equals("1")) {
-            Gender = "女";
+            gender = "女";
         }
 
         if(sel.equals("0")){
-            Select = "製品について";
+            select = "製品について";
         }else if(sel.equals("1")) {
-            Select = "不具合やクレーム";
+            select = "不具合やクレーム";
         }else if(sel.equals("2")) {
-            Select = "アフターサポート";
+            select = "アフターサポート";
         }
 
         response.setContentType("text/html; charset=UTF-8");
@@ -47,10 +47,10 @@ public class Result extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<p>" + "以下の内容でお問い合わせしました。回答をお待ちください。" + "</p>");
-        out.println("<p>名前：" + Name + "様" + "</p>");
-        out.println("<p>性別：" + Gender + "</p>");
-        out.println("<p>お問い合わせ種類:" + Select + "</p>");
-        out.println("<p>お問い合わせ内容:" + Textbox + "</p>");
+        out.println("<p>名前：" + name + "様" + "</p>");
+        out.println("<p>性別：" + gender + "</p>");
+        out.println("<p>お問い合わせ種類:" + select + "</p>");
+        out.println("<p>お問い合わせ内容:" + textBox + "</p>");
         out.println("</body>");
         out.println("</html>");
     }
