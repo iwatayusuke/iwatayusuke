@@ -24,17 +24,17 @@ public class Result extends HttpServlet {
         String select = "";
         String textBox = request.getParameter("textbox");
 
-        if(gen.equals("0")){
+        if("0".equals(gen)){
             gender = "男";
-        }else if(gen.equals("1")) {
+        }else if("1".equals(gen)) {
             gender = "女";
         }
 
-        if(sel.equals("0")){
+        if("0".equals(sel)){
             select = "製品について";
-        }else if(sel.equals("1")) {
+        }else if("1".equals(sel)) {
             select = "不具合やクレーム";
-        }else if(sel.equals("2")) {
+        }else if("2".equals(sel)) {
             select = "アフターサポート";
         }
 
