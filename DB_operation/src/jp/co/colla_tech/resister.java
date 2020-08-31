@@ -2,6 +2,7 @@ package jp.co.colla_tech;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,12 +17,14 @@ import javax.servlet.http.HttpServletResponse;
 public class resister extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         Connection con = null;
         String iden = request.getParameter("id");
         int id = Integer.parseInt(iden);
         String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
+        String strBirthday = request.getParameter("birthday");
+        Date birthday = Date.valueOf(strBirthday);
         String nenrei = request.getParameter("age");
         int age = Integer.parseInt(nenrei);
 
@@ -30,7 +33,7 @@ public class resister extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //データベースへの接続
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/task1", "iwata", "iwata");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/task1?useUnicode=true&characterEncoding=utf8", "iwata", "iwata");
             System.out.println("DB接続が成功しました。" );
 
             //SQL文の実行
@@ -39,7 +42,7 @@ public class resister extends HttpServlet {
             //条件の「?」に値を設定
             ps.setInt(1,id);
             ps.setString(2,name);
-            ps.setString(3,birthday);
+            ps.setDate(3,birthday);
             ps.setInt(4,age);
 
             //insertした件数を取得する
@@ -64,12 +67,5 @@ public class resister extends HttpServlet {
                 }
             }
         }
-
     }
-
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
-
 }
