@@ -1,6 +1,7 @@
 package jp.co.colla_tech;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -41,16 +42,25 @@ public class search extends HttpServlet {
             ResultSet rs = ps.executeQuery();
 
             //結果表に格納された情報を表示
-            System.out.println("検索結果");
             while(rs.next()) {
+                response.setContentType("text/html; charset=UTF-8");
+                PrintWriter out = response.getWriter();
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<meta charset='UTF-8'>");
+                out.println("<title>検索結果</title>");
+                out.println("</head>");
+                out.println("<body>");
                 int iden = rs.getInt("id");
-                System.out.println("ID：" + iden);
+                out.println("<p>ID：" + iden +  "</p>");
                 String simei = rs.getString("name");
-                System.out.println("名前：" + simei);
+                out.println("<p>名前：" + simei +  "</p>");
                 Date tanjoubi = rs.getDate("birthday");
-                System.out.println("誕生日：" + tanjoubi);
+                out.println("<p>" + tanjoubi +  "</p>");
                 int nenrei = rs.getInt("age");
-                System.out.println("年齢：" + nenrei);
+                out.println("<p>年齢：" + nenrei +  "</p>");
+                out.println("</body>");
+                out.println("</html>");
             }
 
             //使用が終わったら切断
